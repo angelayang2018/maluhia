@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid $lightgray;
+
+    .hidden{
+        visibility: hidden;
+    }
+}

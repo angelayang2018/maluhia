@@ -1,0 +1,36 @@
+.condo{
+    padding: 150px 0;
+}
+
+
+
+
+.amenities{
+    
+    width: 100%;
+
+    div{
+        display: flex;
+        justify-content: center;
+    }
+
+    ul{
+        width: 50%;
+        box-sizing: border-box;
+        font-family: "Montserrat";
+        column-count: 2;
+        list-style: none;
+        padding: 20px;
+    }
+    
+    li{
+        font-size: 12px;
+        padding: 20px 0;
+        border-bottom: 1px solid black;
+    }
+
+    
+
+}
+
+

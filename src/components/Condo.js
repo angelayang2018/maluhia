@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Mauivista() {
+export default function Condo() {
   return (
-    <div>
+    <div className = "condo">
       <div></div>
       <h1>Welcome to Maui Vista</h1>
 
@@ -20,14 +20,17 @@ export default function Mauivista() {
         </p>
       </section>
 
-      <section>
+      <section className = "amenities">
         <h3>AMENITIES</h3>
         <h2>This condo comes with</h2>
-        <ul>
-          {amenities.map((amenity, index) => (
-            <li key={index}>{amenity}</li>
-          ))}
-        </ul>
+        <div>
+          <img src = "https://i.ibb.co/G9b6KG5/mauivistaflowers.png" alt = "Maui Vista Flowers near Tennis Courts" />
+          <ul>
+            {amenities.map((amenity, index) => (
+              <li key={index}>{amenity}</li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section>
@@ -53,7 +56,7 @@ export default function Mauivista() {
 
       <section>
         <h3>DISCOVER PARADISE</h3>
-        <h2>VISIT MAUI VISTA</h2>
+        <h2>Visit Maui Vista</h2>
         <button>Book your stay</button>
       </section>
     </div>
