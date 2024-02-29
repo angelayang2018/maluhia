@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Mauivista from './pages/Mauivista';
+import Haikale from './pages/Haikale';
+import Listings from './pages/Listings';
+import "./styles/styles.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path = "/" element = {<Home></Home>}></Route>
+        <Route path = "/mauivista" element = {<Mauivista></Mauivista>}></Route>
+        <Route path = "/haikale" element = {<Haikale></Haikale>}></Route>
+        <Route path = "/listings" element = {<Listings></Listings>}></Route>
+        <Route path = "*" element = {<Home></Home>}></Route>
+      </Routes>
     </div>
   );
 }
