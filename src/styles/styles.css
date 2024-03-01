@@ -14,6 +14,10 @@ h1, h2 {
   font-family: "CinzelHeader";
 }
 
+h2 {
+  font-size: 50px;
+}
+
 h3 {
   font-family: "Montserrat";
   font-weight: 200;
@@ -46,7 +50,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 50px;
@@ -63,27 +67,165 @@ p {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   background-color: white;
   border-bottom: 1px solid #9D9A9A;
+  z-index: 1000;
+  padding: 0 3%;
+  box-sizing: border-box;
 }
 .navbar .hidden {
   visibility: hidden;
 }
 
-.condo {
-  padding: 150px 0;
+.divider p {
+  overflow: hidden;
+  text-align: center;
+  color: #CF9E3E;
+  font-size: 40px;
+}
+.divider p::before,
+.divider p::after {
+  background-color: #CF9E3E;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+.divider p::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.divider p::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.carousel .swiper {
+  width: 48%;
+  padding: 0;
+  margin: 0;
+}
+.carousel .swiper img {
+  width: 100%;
+}
+
+.carousel_large {
+  width: 100%;
+  margin-top: 200px;
+  margin-bottom: 300px;
+}
+.carousel_large .swiper {
+  position: relative;
+}
+.carousel_large .swiper img {
+  width: 100%;
+}
+.carousel_large .swiper .swiper_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.carousel_large .mini_carousel {
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttonGold {
+  background-color: #CF9E3E;
+  font-family: "Montserrat";
+  color: white;
+  padding: 5px 40px;
+  border-radius: 35px;
+  border: none;
+  border: 1px solid #CF9E3E;
+}
+.buttonGold p {
+  width: 100%;
+}
+.buttonGold:hover {
+  background-color: white;
+  color: #CF9E3E;
+}
+
+.condo_home {
+  width: 100%;
+  position: relative;
+}
+.condo_home img {
+  width: 100%;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 3px;
+}
+
+.welcome_text {
+  border-top: solid 1px #CF9E3E;
+  border-bottom: solid 1px #CF9E3E;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 100px;
+}
+
+.condo_description {
+  padding: 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.condo_description .condo_des_container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.condo_description .condo_des_container h3, .condo_description .condo_des_container p {
+  margin: 40px 0;
+}
+.condo_description .condo_des_images {
+  width: 100%;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.condo_description .condo_des_images img:nth-child(2) {
+  transform: translateY(50px);
 }
 
 .amenities {
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 .amenities div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 50%;
 }
 .amenities ul {
-  width: 50%;
   box-sizing: border-box;
   font-family: "Montserrat";
   -moz-column-count: 2;
@@ -94,7 +236,41 @@ p {
 .amenities li {
   font-size: 12px;
   padding: 20px 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #9D9A9A;
+}
+
+.condo_gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0;
+}
+
+.condo_town {
+  padding: 0 3%;
+}
+
+.tempImage {
+  width: 100%;
+  height: 500px;
+  background-color: gray;
+}
+
+.condo_banner {
+  margin-top: 200px;
+  background-image: url(https://i.ibb.co/J3Fv9Fn/mauivistatennisbanner.png);
+  height: 439px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.condo_banner h3, .condo_banner h2 {
+  color: white;
 }
 
 .listings {
@@ -111,6 +287,21 @@ p {
   justify-content: center;
   align-items: center;
   padding-top: 20vh;
+}
+
+.home_hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home_hero div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {

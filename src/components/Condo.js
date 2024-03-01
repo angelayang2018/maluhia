@@ -1,30 +1,64 @@
 import React from "react";
+import Divider from "./Divider";
+import Carousel from "./Carousel";
+import Button from "./Button";
+
 
 export default function Condo() {
   return (
-    <div className = "condo">
-      <div></div>
-      <h1>Welcome to Maui Vista</h1>
+    <div className="condo">
+      <div className="condo_home">
+        <img src="https://i.ibb.co/W0LcjQ0/mauivista.webp" alt="mauivista" />
+        <img className="wave" src="wave.svg" alt="wave" />
+      </div>
+      <h1 className="welcome_text">Welcome to Maui Vista</h1>
 
-      <section>
-        <h3>MAUI VISTA</h3>
-        <h2>Oceanview Tranquility </h2>
-        <p>
-          Escape to our serene 2-bedroom, 2-bathroom Maui condo, ideal for small
-          families or couples seeking relaxation. With a lanai offering stunning
-          sea views, this tranquil retreat is perfect for unwinding and enjoying
-          picturesque sunsets. Surrounded by lush greenery, the condo provides a
-          tropical oasis, with landscaped grounds for leisurely walks. Fully
-          equipped with modern amenities and a maximum occupancy of 6, our condo
-          offers a peaceful and luxurious stay for your Maui getaway.
-        </p>
+      <section className="condo_description">
+        <div className="condo_des_container">
+          <img src="https://i.ibb.co/Dt8Wzvq/flower.png" alt="Flower Icon" />
+          <h3>MAUI VISTA</h3>
+          <h2>Oceanview Tranquility </h2>
+          <p>
+            Escape to our serene 2-bedroom, 2-bathroom Maui condo, ideal for
+            small families or couples seeking relaxation. With a lanai offering
+            stunning sea views, this tranquil retreat is perfect for unwinding
+            and enjoying picturesque sunsets. Surrounded by lush greenery, the
+            condo provides a tropical oasis, with landscaped grounds for
+            leisurely walks. Fully equipped with modern amenities and a maximum
+            occupancy of 6, our condo offers a peaceful and luxurious stay for
+            your Maui getaway.
+          </p>
+          <img
+            src="https://i.ibb.co/WDkFFsS/mauivistafloorplan.png"
+            alt="mauivistafloorplan"
+          />
+        </div>
+        <div className="condo_des_images">
+          <img
+            src="https://i.ibb.co/G9tDxps/waterripples-1.png"
+            alt="waterripples-1"
+          />
+          <img
+            src="https://i.ibb.co/w6DB8Lf/mauivistalivingroomlong.png"
+            alt="mauivistalivingroomlong"
+          />
+          <img
+            src="https://i.ibb.co/RC2XrZJ/kambeachlong.png"
+            alt="kambeachlong"
+          />
+        </div>
       </section>
 
-      <section className = "amenities">
-        <h3>AMENITIES</h3>
-        <h2>This condo comes with</h2>
+      <Divider></Divider>
+
+      <section className="amenities">
+        <img
+          src="https://i.ibb.co/G9b6KG5/mauivistaflowers.png"
+          alt="Maui Vista Flowers near Tennis Courts"
+        />
         <div>
-          <img src = "https://i.ibb.co/G9b6KG5/mauivistaflowers.png" alt = "Maui Vista Flowers near Tennis Courts" />
+          <h3>AMENITIES</h3>
+          <h2>This condo comes with</h2>
           <ul>
             {amenities.map((amenity, index) => (
               <li key={index}>{amenity}</li>
@@ -33,14 +67,19 @@ export default function Condo() {
         </div>
       </section>
 
-      <section>
+      <section className="condo_gallery">
+        <img src="https://i.ibb.co/Dt8Wzvq/flower.png" alt="Flower Icon" />
         <h2>Get an impression</h2>
-        <button>Book your stay</button>
+        <Carousel></Carousel>
+        <a href = "https://www.airbnb.com/rooms/51288731?source_impression_id=p3_1709247247_nL2nulQKJTDvkySV"><Button>Book your stay</Button></a>
       </section>
 
-      <section>
+      <Divider></Divider>
+
+      <section className="condo_town">
         <h3>LOCATION</h3>
         <h2>Explore the vibrant coastal town of kihei</h2>
+        <div className="tempImage"></div>
 
         <div>
           <h3>500 METERS</h3>
@@ -50,14 +89,19 @@ export default function Condo() {
             shopping and fine dining. A world of luxury and style nestled
             against the backdrop of Maui's stunning coastline awaits.
           </p>
-          <button>Learn more</button>
+          <Button>Learn more</Button>
         </div>
       </section>
 
-      <section>
+      <section className="condo_banner">
+        <img
+          src="https://i.ibb.co/m0hY4nw/whiteflower.png"
+          alt="White Flower Icon"
+          border="0"
+        ></img>
         <h3>DISCOVER PARADISE</h3>
-        <h2>Visit Maui Vista</h2>
-        <button>Book your stay</button>
+        <h2>Visit maui vista</h2>
+        <Button>Book your stay</Button>
       </section>
     </div>
   );

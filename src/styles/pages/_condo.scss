@@ -1,36 +1,126 @@
-.condo{
-    padding: 150px 0;
-}
+@use "../abstracts/" as *;
 
-
-
-
-.amenities{
-    
+.condo_home{
     width: 100%;
-
-    div{
-        display: flex;
-        justify-content: center;
+    position: relative;
+    img{
+        width: 100%;
     }
+}
 
-    ul{
-        width: 50%;
-        box-sizing: border-box;
-        font-family: "Montserrat";
-        column-count: 2;
-        list-style: none;
-        padding: 20px;
+.wave{
+   position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 3px;
+   
+}
+
+.welcome_text {
+  border-top: solid 1px $gold;
+  border-bottom: solid 1px $gold;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 100px;
+}
+
+.condo_description {
+    padding: 200px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .condo_des_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h3, p{
+        margin: 40px 0;
     }
+  }
+
+  .condo_des_images{
+    width: 100%;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+
     
-    li{
-        font-size: 12px;
-        padding: 20px 0;
-        border-bottom: 1px solid black;
-    }
+  }
 
-    
+  .condo_des_images img:nth-child(2){
+    transform: translateY(50px);
+  }
 
 }
 
 
+.amenities {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+
+  ul {
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    column-count: 2;
+    list-style: none;
+    padding: 20px;
+  }
+
+  li {
+    font-size: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid $lightgray;
+  }
+}
+
+.condo_gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0;
+}
+
+.condo_town{
+    padding: 0 3%;
+}
+
+.tempImage{
+    width: 100%;
+    height: 500px;
+    background-color: gray;
+}
+
+
+.condo_banner{
+    margin-top: 200px;
+    background-image: url(https://i.ibb.co/J3Fv9Fn/mauivistatennisbanner.png);
+    height: 439px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3, h2{
+        color: white;
+
+    }
+
+    
+}

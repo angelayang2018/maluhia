@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+
+.divider{
+    p {
+        overflow: hidden;
+        text-align: center;
+        color: $gold;
+        font-size: 40px;
+      }
+
+    p::before,
+    p::after {
+      background-color: $gold;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    
+    p::before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    
+    p::after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+}

@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.buttonGold{
+    
+    background-color: $gold;
+    font-family: "Montserrat";
+    color: white;
+    padding: 5px 40px;
+    border-radius: 35px;
+    border: none;
+    border: 1px solid $gold;
+
+    &:hover{
+        background-color: white;
+        color: $gold;
+    }
+}

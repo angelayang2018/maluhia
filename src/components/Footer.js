@@ -7,7 +7,7 @@ export default function Footer() {
       <div className = "footer_row">
         <div>
           <h3>VISIT</h3>
-          <Link to ="/home"><h1>MALUHIA</h1></Link>
+          <Link to ="/home"><h1>Maluhia</h1></Link>
         </div>
         <div>
           <h3>CONTACT</h3>

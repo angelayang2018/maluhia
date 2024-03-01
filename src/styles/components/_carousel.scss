@@ -1,0 +1,45 @@
+.carousel{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .swiper {
+        width: 48%;
+        padding: 0;
+        margin: 0;
+        img{
+            width: 100%;
+          }
+    }
+}
+
+.carousel_large{
+    width: 100%;
+    margin-top: 200px;
+    margin-bottom: 300px;
+    .swiper {
+        position: relative;
+        img{
+            width: 100%;
+          }
+          .swiper_description{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+    }
+
+    .mini_carousel{
+        width: 30%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
