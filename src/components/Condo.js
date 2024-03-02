@@ -2,6 +2,7 @@ import React from "react";
 import Divider from "./Divider";
 import Carousel from "./Carousel";
 import Button from "./Button";
+import Marquee from "./Marquee";
 
 
 export default function Condo() {
@@ -103,6 +104,7 @@ export default function Condo() {
         <h2>Visit maui vista</h2>
         <Button>Book your stay</Button>
       </section>
+
     </div>
   );
 }
@@ -122,4 +124,13 @@ const amenities = [
   "Towels",
   "Iron",
   "Smart lock",
+];
+
+const words = [
+  "Picturesque",
+  "Beachside",
+  "Tropical",
+  "Idyllic",
+  "Comfortable",
+  "Sunny",
 ];

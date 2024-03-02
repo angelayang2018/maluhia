@@ -63,6 +63,39 @@ p {
   border-left: 0;
 }
 
+.marquee {
+  position: relative;
+  font-family: "Nostrav";
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.marquee h2 {
+  margin: 5px 0;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.marqText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.marqText h2 {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+}
+
 .navbar {
   display: flex;
   width: 100%;
@@ -75,7 +108,8 @@ p {
   padding: 0 3%;
   box-sizing: border-box;
 }
-.navbar .hidden {
+
+.hidden {
   visibility: hidden;
 }
 
@@ -155,9 +189,6 @@ p {
   border-radius: 35px;
   border: none;
   border: 1px solid #CF9E3E;
-}
-.buttonGold p {
-  width: 100%;
 }
 .buttonGold:hover {
   background-color: white;

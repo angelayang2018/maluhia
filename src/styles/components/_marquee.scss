@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+.marquee {
+  position: relative;
+  font-family: "Nostrav";
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    margin: 5px 0;
+    font-family: "Montserrat";
+    font-weight: 400;
+  }
+}
+
+.marqText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.marqText h2 {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+}
