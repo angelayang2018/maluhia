@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FlowerIcon from "../components/FlowerIcon";
 
 export default function Listings() {
   return (
     <div className = "listings">
-      <img src = "https://i.ibb.co/Dt8Wzvq/flower.png" alt = "Flower Icon" />
+      <FlowerIcon />
       <h3>OUR CONDOS</h3>
       <h1>Indulge in serenity</h1>
       <p>

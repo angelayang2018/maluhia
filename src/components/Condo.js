@@ -2,10 +2,15 @@ import React from "react";
 import Divider from "./Divider";
 import Carousel from "./Carousel";
 import Button from "./Button";
-import Marquee from "./Marquee";
+import FlowerIcon from "./FlowerIcon";
+import { gsap, ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 
 export default function Condo() {
+  
+
+
   return (
     <div className="condo">
       <div className="condo_home">
@@ -16,7 +21,7 @@ export default function Condo() {
 
       <section className="condo_description">
         <div className="condo_des_container">
-          <img src="https://i.ibb.co/Dt8Wzvq/flower.png" alt="Flower Icon" />
+          <FlowerIcon />
           <h3>MAUI VISTA</h3>
           <h2>Oceanview Tranquility </h2>
           <p>
@@ -69,7 +74,7 @@ export default function Condo() {
       </section>
 
       <section className="condo_gallery">
-        <img src="https://i.ibb.co/Dt8Wzvq/flower.png" alt="Flower Icon" />
+        <FlowerIcon/>
         <h2>Get an impression</h2>
         <Carousel></Carousel>
         <a href = "https://www.airbnb.com/rooms/51288731?source_impression_id=p3_1709247247_nL2nulQKJTDvkySV"><Button>Book your stay</Button></a>

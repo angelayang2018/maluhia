@@ -1,19 +1,25 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, Controller} from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css";
+import { useState } from "react";
 
 export default function CarouselLarge() {
+
+  const [firstSwiper, setFirstSwiper] = useState(null);
+  const [secondSwiper, setSecondSwiper] = useState(null);
   return (
     <div className="carousel_large">
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, Controller]}
         loop="true"
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
+        onSwiper={setFirstSwiper}
+        controller={{ control: secondSwiper }}
       >
         {swiperImages.map((swiperImage, index) => (
           <SwiperSlide key={index}>
@@ -28,11 +34,12 @@ export default function CarouselLarge() {
 
       <Swiper
       className = "mini_carousel"
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules = {[Controller]}
         loop="true"
         slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
+        onSwiper={setSecondSwiper}
+        controller={{ control: firstSwiper }}
+        
       >
         {swiperImages.map((swiperImage, index) => (
           <SwiperSlide key={index}>

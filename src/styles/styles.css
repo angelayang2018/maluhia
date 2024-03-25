@@ -195,6 +195,19 @@ p {
   color: #CF9E3E;
 }
 
+.wave_container {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bottom_wave {
+  height: 100vh;
+  width: 100%;
+  background-color: #5B668B;
+}
+
 .condo_home {
   width: 100%;
   position: relative;

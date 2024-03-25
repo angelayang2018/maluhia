@@ -1,48 +1,48 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import {Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Controller } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import 'swiper/css/scrollbar';
+import "swiper/css/scrollbar";
 import "swiper/css";
+import { useState } from "react";
 
 export default function Carousel() {
-  return (
-    <div className = "carousel">
-    <Swiper
-    modules={[Navigation, Pagination, Scrollbar, A11y]}
-    loop = "true"
-    slidesPerView={1}
-    navigation
-    pagination={{ clickable: true }}
-    scrollbar={{ draggable: true }}
-    
-  >
-    {swiperImages.map((swiperImage, index) => (
-          <SwiperSlide key={index}>
-            <img src={swiperImage.img} alt={swiperImage.alt} />
-          </SwiperSlide>
-        ))}
-    
-  </Swiper>
+  const [firstSwiper, setFirstSwiper] = useState(null);
+  const [secondSwiper, setSecondSwiper] = useState(null);
 
-  <Swiper
-    modules={[Navigation, Pagination, Scrollbar, A11y]}
-    loop = "true"
-    slidesPerView={1}
-    navigation
-    pagination={{ clickable: true }}
-    scrollbar={{ draggable: true }}
-    
-  >
-    {swiperImages.map((swiperImage, index) => (
+  return (
+    <div className="carousel">
+      <Swiper
+        modules={[Navigation, Controller]}
+        loop="true"
+        slidesPerView={1}
+        navigation
+        
+        onSwiper={setFirstSwiper}
+        controller={{ control: secondSwiper }}
+      >
+        {swiperImages.map((swiperImage, index) => (
           <SwiperSlide key={index}>
             <img src={swiperImage.img} alt={swiperImage.alt} />
           </SwiperSlide>
         ))}
-    
-  </Swiper>
-  
-  </div>
+      </Swiper>
+
+      <Swiper
+        modules={[Navigation, Controller]}
+        loop="true"
+        slidesPerView={1}
+        navigation
+        onSwiper={setSecondSwiper}
+        controller={{ control: firstSwiper }}
+      >
+        {swiperImages.map((swiperImage, index) => (
+          <SwiperSlide key={index}>
+            <img src={swiperImage.img} alt={swiperImage.alt} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
 
